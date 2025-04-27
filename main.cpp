@@ -34,6 +34,9 @@ int main() {
             case 7:
                 printAllPointers(numbers);
                 break;
+            case 8:
+                printPointer(numbers);
+                break;
             default:
                 printf("Nieprawidlowy wybor \n");
         }

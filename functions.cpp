@@ -90,6 +90,18 @@ void printAllPointers(const int numbers[ROWSIZE][COLSIZE]){
     }
 }
 
+void printPointer(const int numbers[ROWSIZE][COLSIZE]){
+    int row;
+    int col;
+
+    printf("W jakim rzedzie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &row);
+    printf("W jakiej kolumnie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &col);
+    printf("&Numbers[%d][%d] = %p\n", row, col,  &numbers[row][col]);
+}
+
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
@@ -99,5 +111,6 @@ void menu(void) {
     printf(" [5] Znajdz maksimum \n");
     printf(" [6] Znajdz minimum \n");
     printf(" [7] Wydrukuj wszystkie adresy tablicy \n");
+    printf(" [8] Wydrukuj adres elementu  \n");
     printf(" [0] Wyjdz \n");
 }
