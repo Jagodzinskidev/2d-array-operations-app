@@ -46,10 +46,22 @@ void changeNumber(int numbers[ROWSIZE][COLSIZE]) {
     numbers[row][col] = change;
 }
 
+float calculateAverage(const int numbers[ROWSIZE][COLSIZE]) {
+    int sum = 0;
+
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            sum += numbers[indexRow][indexCol];
+        }
+    }
+    return (float) sum / (ROWSIZE*COLSIZE);
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
     printf(" [2] Wydrukuj jeden element tablicy \n");
     printf(" [3] Zmien element tablicy \n");
+    printf(" [4] Oblicz srednia \n");
     printf(" [0] Wyjdz \n");
 }

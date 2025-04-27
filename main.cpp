@@ -22,6 +22,9 @@ int main() {
             case 0:
                 printf("Zakonczono program");
                 break;
+            case 4:
+                printf("Srednia wszystkich elementow tablicy wynosi %.2f \n",calculateAverage(numbers));
+                break;
             default:
                 printf("Nieprawidlowy wybor \n");
         }
