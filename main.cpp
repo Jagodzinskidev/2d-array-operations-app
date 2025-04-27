@@ -13,6 +13,9 @@ int main() {
             case 1:
                 printAllNumbers(numbers);
                 break;
+            case 2:
+                printNumber(numbers);
+                break;
             case 0:
                 printf("Zakonczono program");
                 break;

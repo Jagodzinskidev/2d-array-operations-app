@@ -21,8 +21,20 @@ void printAllNumbers(const int numbers[ROWSIZE][COLSIZE]){
     }
 }
 
+void printNumber(const int numbers[ROWSIZE][COLSIZE]){
+    int row;
+    int col;
+
+    printf("W jakim rzedzie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &row);
+    printf("W jakiej kolumnie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &col);
+    printf("Numbers[%d][%d] = %d\n", row, col,  numbers[row][col]);
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
+    printf(" [2] Wydrukuj jeden element tablicy \n");
     printf(" [0] Wyjdz \n");
 }
