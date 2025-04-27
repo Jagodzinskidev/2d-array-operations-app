@@ -82,6 +82,14 @@ int findMinimum(const int numbers[ROWSIZE][COLSIZE]) {
     return temp;
 }
 
+void printAllPointers(const int numbers[ROWSIZE][COLSIZE]){
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            printf("&Numbers[%d][%d] = %p\n", indexRow, indexCol , &numbers[indexRow][indexCol]);
+        }
+    }
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
@@ -90,5 +98,6 @@ void menu(void) {
     printf(" [4] Oblicz srednia \n");
     printf(" [5] Znajdz maksimum \n");
     printf(" [6] Znajdz minimum \n");
+    printf(" [7] Wydrukuj wszystkie adresy tablicy \n");
     printf(" [0] Wyjdz \n");
 }

@@ -31,6 +31,9 @@ int main() {
             case 6:
                 printf("Najmniejsza wartosc z wszystkich elementow tablicy wynosi %d \n",findMinimum(numbers));
                 break;
+            case 7:
+                printAllPointers(numbers);
+                break;
             default:
                 printf("Nieprawidlowy wybor \n");
         }
