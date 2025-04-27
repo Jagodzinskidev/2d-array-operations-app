@@ -10,6 +10,9 @@ int main() {
         menu();
         scanf("%d", choiceAddress);
         switch (choice) {
+            case 1:
+                printAllNumbers(numbers);
+                break;
             case 0:
                 printf("Zakonczono program");
                 break;

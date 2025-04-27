@@ -13,7 +13,16 @@ void enterNumbers(int numbers[ROWSIZE][COLSIZE]) {
     }
 }
 
+void printAllNumbers(const int numbers[ROWSIZE][COLSIZE]){
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            printf("Numbers[%d][%d] = %d\n", indexRow, indexCol , numbers[indexRow][indexCol]);
+        }
+    }
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
+    printf(" [1] Wydrukuj cala tablice \n");
     printf(" [0] Wyjdz \n");
 }
