@@ -16,6 +16,9 @@ int main() {
             case 2:
                 printNumber(numbers);
                 break;
+            case 3:
+                changeNumber(numbers);
+                break;
             case 0:
                 printf("Zakonczono program");
                 break;

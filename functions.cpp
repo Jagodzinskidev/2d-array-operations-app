@@ -32,9 +32,24 @@ void printNumber(const int numbers[ROWSIZE][COLSIZE]){
     printf("Numbers[%d][%d] = %d\n", row, col,  numbers[row][col]);
 }
 
+void changeNumber(int numbers[ROWSIZE][COLSIZE]) {
+    int row;
+    int col;
+    int change;
+
+    printf("W jakim rzedzie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &row);
+    printf("W jakiej kolumnie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    scanf("%d", &col);
+    printf("Wpisz numer: \n");
+    scanf("%d", &change);
+    numbers[row][col] = change;
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
     printf(" [2] Wydrukuj jeden element tablicy \n");
+    printf(" [3] Zmien element tablicy \n");
     printf(" [0] Wyjdz \n");
 }

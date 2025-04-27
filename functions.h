@@ -10,6 +10,7 @@
 void enterNumbers(int numbers[ROWSIZE][COLSIZE]);
 void printAllNumbers(const int numbers[ROWSIZE][COLSIZE]);
 void printNumber(const int numbers[ROWSIZE][COLSIZE]);
+void changeNumber(int numbers[ROWSIZE][COLSIZE]);
 void menu(void);
 
 #endif //FUNCTIONS_H
