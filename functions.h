@@ -7,6 +7,7 @@
 #define ROWSIZE 5
 #define COLSIZE 2
 
+void enterNumbers(int numbers[ROWSIZE][COLSIZE]);
 void menu(void);
 
 #endif //FUNCTIONS_H

@@ -5,6 +5,7 @@ int main() {
     int numbers[ROWSIZE][COLSIZE];
     int choice = 0;
     int *choiceAddress = &choice;
+    enterNumbers(numbers);
     do {
         menu();
         scanf("%d", choiceAddress);
