@@ -25,6 +25,9 @@ int main() {
             case 4:
                 printf("Srednia wszystkich elementow tablicy wynosi %.2f \n",calculateAverage(numbers));
                 break;
+            case 5:
+                printf("Najwieksza wartosc z wszystkich elementow tablicy wynosi %d \n",findMaximum(numbers));
+                break;
             default:
                 printf("Nieprawidlowy wybor \n");
         }
