@@ -13,6 +13,7 @@ void printNumber(const int numbers[ROWSIZE][COLSIZE]);
 void changeNumber(int numbers[ROWSIZE][COLSIZE]);
 float calculateAverage(const int numbers[ROWSIZE][COLSIZE]);
 int findMaximum(const int numbers[ROWSIZE][COLSIZE]);
+int findMinimum(const int numbers[ROWSIZE][COLSIZE]);
 void menu(void);
 
 #endif //FUNCTIONS_H

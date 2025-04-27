@@ -70,6 +70,18 @@ int findMaximum(const int numbers[ROWSIZE][COLSIZE]) {
     return temp;
 }
 
+int findMinimum(const int numbers[ROWSIZE][COLSIZE]) {
+    int temp = numbers[0][0];
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            if (numbers[indexRow][indexCol] < temp) {
+                temp = numbers[indexRow][indexCol];
+            }
+        }
+    }
+    return temp;
+}
+
 void menu(void) {
     printf("Wybierz opcje: \n");
     printf(" [1] Wydrukuj cala tablice \n");
@@ -77,5 +89,6 @@ void menu(void) {
     printf(" [3] Zmien element tablicy \n");
     printf(" [4] Oblicz srednia \n");
     printf(" [5] Znajdz maksimum \n");
+    printf(" [6] Znajdz minimum \n");
     printf(" [0] Wyjdz \n");
 }

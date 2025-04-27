@@ -28,6 +28,9 @@ int main() {
             case 5:
                 printf("Najwieksza wartosc z wszystkich elementow tablicy wynosi %d \n",findMaximum(numbers));
                 break;
+            case 6:
+                printf("Najmniejsza wartosc z wszystkich elementow tablicy wynosi %d \n",findMinimum(numbers));
+                break;
             default:
                 printf("Nieprawidlowy wybor \n");
         }
