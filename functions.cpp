@@ -37,9 +37,9 @@ void changeNumber(int numbers[ROWSIZE][COLSIZE]) {
     int col;
     int change;
 
-    printf("W jakim rzedzie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    printf("W jakim rzedzie znajduje sie element tablicy ktory chcesz zmienic? \n");
     scanf("%d", &row);
-    printf("W jakiej kolumnie znajduje sie element tablicy ktory chcesz sprawdzic? \n");
+    printf("W jakiej kolumnie znajduje sie element tablicy ktory chcesz zmienic? \n");
     scanf("%d", &col);
     printf("Wpisz numer: \n");
     scanf("%d", &change);
@@ -101,6 +101,38 @@ void printPointer(const int numbers[ROWSIZE][COLSIZE]){
     printf("&Numbers[%d][%d] = %p\n", row, col,  &numbers[row][col]);
 }
 
+void saveToFile(const int numbers[ROWSIZE][COLSIZE]) {
+    fptr = fopen("data.txt", "w");
+    if (fptr == 0)
+    {
+        printf("Blad otwierania pliku!\n");
+        exit(1);
+    }
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            fprintf(fptr, "%d\n", numbers[indexRow][indexCol]);
+        }
+    }
+    fclose(fptr);
+    printf("Poprawnie zapisano tablice do pliku.\n");
+}
+
+void openFromFile(int numbers[ROWSIZE][COLSIZE]) {
+    fptr = fopen("data.txt", "r");
+    int numberArray[ROWSIZE][COLSIZE];
+    if (fptr == 0) {
+        printf("Blad otwierania pliku!\n");
+        exit(1);
+    }
+    for (int indexRow = 0; indexRow < ROWSIZE; indexRow++) {
+        for (int indexCol = 0; indexCol < COLSIZE; indexCol++) {
+            fscanf(fptr, "%d", &numberArray[indexRow][indexCol]);
+            numbers[indexRow][indexCol] = numberArray[indexRow][indexCol];
+        }
+    }
+    fclose(fptr);
+    printf("Poprawnie odczytano tablice z pliku.\n");
+}
 
 void menu(void) {
     printf("Wybierz opcje: \n");
@@ -112,5 +144,7 @@ void menu(void) {
     printf(" [6] Znajdz minimum \n");
     printf(" [7] Wydrukuj wszystkie adresy tablicy \n");
     printf(" [8] Wydrukuj adres elementu  \n");
+    printf(" [9] Zapisz tablice w pliku  \n");
+    printf( "[10] Odczytaj tablice z pliku \n");
     printf(" [0] Wyjdz \n");
 }

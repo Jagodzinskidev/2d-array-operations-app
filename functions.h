@@ -16,6 +16,8 @@ int findMaximum(const int numbers[ROWSIZE][COLSIZE]);
 int findMinimum(const int numbers[ROWSIZE][COLSIZE]);
 void printAllPointers(const int numbers[ROWSIZE][COLSIZE]);
 void printPointer(const int numbers[ROWSIZE][COLSIZE]);
+void saveToFile(const int numbers[ROWSIZE][COLSIZE]);
+void openFromFile( int numbers[ROWSIZE][COLSIZE]);
 void menu(void);
 
 #endif //FUNCTIONS_H

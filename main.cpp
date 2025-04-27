@@ -19,9 +19,6 @@ int main() {
             case 3:
                 changeNumber(numbers);
                 break;
-            case 0:
-                printf("Zakonczono program");
-                break;
             case 4:
                 printf("Srednia wszystkich elementow tablicy wynosi %.2f \n",calculateAverage(numbers));
                 break;
@@ -36,6 +33,15 @@ int main() {
                 break;
             case 8:
                 printPointer(numbers);
+                break;
+            case 9:
+                saveToFile(numbers);
+                break;
+            case 10:
+                openFromFile(numbers);
+                break;
+            case 0:
+                printf("Zakonczono program");
                 break;
             default:
                 printf("Nieprawidlowy wybor \n");
